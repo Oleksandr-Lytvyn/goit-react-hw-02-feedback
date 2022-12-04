@@ -1,24 +1,35 @@
 import React from 'react';
+import css from './Statistics.module.css';
 
 export function Statistics(props) {
   return (
-    <ul>
-      <li>
-        <p>
-          Good:<span>{props.good}</span>
+    <ul className={css.stats_list}>
+      <li className={css.stats_item}>
+        <p className={css.stats_item_text}>
+          Good:<span className={css.stats_item_number}>{props.good}</span>
         </p>
-        <p>
-          Neutral:<span>{props.neutral}</span>
+      </li>
+      <li className={css.stats_item}>
+        <p className={css.stats_item_text}>
+          Neutral:<span className={css.stats_item_number}>{props.neutral}</span>
         </p>
-        <p>
-          Bad:<span>{props.bad}</span>
+      </li>
+      <li className={css.stats_item}>
+        <p className={css.stats_item_text}>
+          Bad:<span className={css.stats_item_number}>{props.bad}</span>
         </p>
-        <p>
-          Total:<span>{props.total}</span>
+      </li>
+      <li className={css.stats_item}>
+        <p className={css.stats_item_text}>
+          Total:<span className={css.stats_item_number}>{props.total}</span>
         </p>
-        <p>
+      </li>
+      <li className={css.stats_item}>
+        <p className={css.stats_item_text}>
           Positive feedback:
-          <span>{props.positivePercentage}%</span>
+          <span className={css.stats_item_number}>
+            {props.positivePercentage}%
+          </span>
         </p>
       </li>
     </ul>

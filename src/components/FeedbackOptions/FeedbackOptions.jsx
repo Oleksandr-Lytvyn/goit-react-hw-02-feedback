@@ -1,8 +1,9 @@
 import React from 'react';
+import css from './FeedbackOptions.module.css';
 
 export function FeedbackOptions(props) {
   return (
-    <ul>
+    <ul className={css.buttons_list}>
       <li>
         <button
           type="button"
