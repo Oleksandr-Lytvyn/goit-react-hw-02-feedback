@@ -1,40 +1,38 @@
 import React from 'react';
 
-export class FeedbackOptions extends React.Component {
-  render() {
-    return (
-      <ul>
-        <li>
-          <button
-            type="button"
-            onClick={() => {
-              this.props.options.incGood();
-            }}
-          >
-            good
-          </button>
-        </li>
-        <li>
-          <button
-            type="button"
-            onClick={() => {
-              this.props.options.incNeutral();
-            }}
-          >
-            neutral
-          </button>
-        </li>
-        <li>
-          <button
-            type="button"
-            onClick={() => {
-              this.props.options.incBad();
-            }}
-          >
-            bad
-          </button>
-        </li>
-      </ul>
-    );
-  }
+export function FeedbackOptions(props) {
+  return (
+    <ul>
+      <li>
+        <button
+          type="button"
+          onClick={() => {
+            props.options.incGood();
+          }}
+        >
+          good
+        </button>
+      </li>
+      <li>
+        <button
+          type="button"
+          onClick={() => {
+            props.options.incNeutral();
+          }}
+        >
+          neutral
+        </button>
+      </li>
+      <li>
+        <button
+          type="button"
+          onClick={() => {
+            props.options.incBad();
+          }}
+        >
+          bad
+        </button>
+      </li>
+    </ul>
+  );
 }

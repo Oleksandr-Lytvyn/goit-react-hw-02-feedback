@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Statistics } from './Statistics/Statistics';
 import { Section } from './Section/Section';
@@ -65,3 +66,21 @@ export class App extends Component {
     );
   }
 }
+
+Section.propTypes = {
+  title: PropTypes.string,
+};
+FeedbackOptions.propTypes = {
+  options: PropTypes.object,
+  onLeaveFeedback: PropTypes.object,
+};
+Notification.propTypes = {
+  message: PropTypes.string,
+};
+Statistics.propTypes = {
+  good: PropTypes.number,
+  neutral: PropTypes.number,
+  bad: PropTypes.number,
+  total: PropTypes.func,
+  positivePercentage: PropTypes.func,
+};
